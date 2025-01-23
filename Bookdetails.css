@@ -1,0 +1,182 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Main container for the book details */
+.display-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Book details container */
+#book-detail-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    transition: all 0.3s ease;  /* Added smooth transition */
+}
+
+#book-detail-container:hover {
+    transform: scale(1.02); /* Slight zoom-in effect when hovering over the container */
+}
+
+/* Title styles */
+h1 {
+    font-size: 32px;
+    color: #1a73e8;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;  /* Smooth color change */
+}
+
+h1:hover {
+    color: #ff6347;  /* Color changes to tomato on hover */
+}
+
+/* Book cover image */
+#book-cover {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;  /* Smooth scaling effect */
+}
+
+#book-cover:hover {
+    transform: scale(1.1);  /* Zoom in when hovering over the book cover */
+}
+
+/* Author image */
+#author_image {
+    width: 50px;
+    
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;  /* Smooth rotation effect */
+}
+
+#author_image:hover {
+    transform: rotate(360deg);  /* Rotate the author image on hover */
+}
+
+/* Text content */
+h2 {
+    font-size: 22px;
+    color: #555;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+h2:hover {
+    color: #ff6347;  /* Change text color on hover */
+    border-color: #ff6347;  /* Change the border color of the heading */
+}
+
+/* Paragraphs for book information */
+p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;  /* Fade in effect for paragraphs */
+}
+
+p:hover {
+    opacity: 1;  /* Make text fully visible when hovering */
+}
+
+/* Amazon link button */
+#amazon-link {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#amazon-link:hover {
+    background-color: #155fa2;  /* Darken button on hover */
+    transform: scale(1.05);  /* Slight zoom-in effect */
+}
+
+/* Publisher and other text sections */
+#publish_places, #publisher_name, #languages, #reading_counts, #subject_type {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;  /* Fade effect */
+}
+
+#publish_places:hover, #publisher_name:hover, #languages:hover, #reading_counts:hover, #subject_type:hover {
+    opacity: 1;  /* Make text fully visible when hovering */
+}
+
+/* Container for back button */
+#back-button-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Back button */
+#back-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e1e1e1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #d1d1d1;  /* Change background color */
+    transform: scale(1.05);  /* Slight zoom-in effect */
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+    #book-cover {
+        width: 180px;
+        height: 250px;
+    }
+
+    #author_image {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #amazon-link {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}

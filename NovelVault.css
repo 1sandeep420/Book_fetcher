@@ -1,0 +1,84 @@
+
+body
+{
+    padding: 1px;
+}
+
+.baground-setup
+{
+    background-image: url(../Book%20fethcher/Assets/Bimage.png);
+    height: 40rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#display-images-block 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#display-images-block img 
+{
+    display: flex;
+    margin: auto;
+
+    width: 200px;
+    margin :20px;
+
+
+}
+
+#display-images-block div
+
+{
+    width: 300px;
+    margin: 20px;
+    border: 2px solid black;
+    
+}
+
+#display-images-block img{
+    margin: auto;
+    padding:  1rem;
+}
+
+#display-images-block h3
+{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+#display-images-block p
+{
+    padding-left: 1rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+  }
+  
+  .scrolling-message {
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide the text that overflows */
+    box-sizing: border-box;
+    display: inline-block; /* Ensure the container is only as wide as the content */
+    animation: scroll 50s linear infinite; /* Scroll effect */
+    color: rgb(1, 1, 1);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End off-screen to the left */
+    }
+  }
+  

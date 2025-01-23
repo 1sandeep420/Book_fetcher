@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bookdetails.css">
+    <link rel="icon" href="../Book fethcher/Assets/logo.jpg">
+    <title>Book Details</title>
+</head>
+<body>
+
+    <div class="display-content">
+
+       
+
+    <!-- Book details section -->
+    <div id="book-detail-container" style="background-color: antiquewhite; ">
+        <h1>BOOK DETAILS</h1>
+        <br style="color: black;">
+        <img id="book-cover" alt="Book Cover">
+        <h2 id="book-title"></h2>
+        <p id="book-author"></p>
+        <p id="book-pub-date"></p>
+        <img  id="author_image" alt="Sry For No image " style="width: 200px;">
+        <h2 style="border: 2px solid black;">Published places</h2>
+        <p id="publish_places"></p>
+        <h2 style="border: 2px solid black;">Publisher name</h2>
+        <p id="publisher_name" ></p>
+        <h2 style="border: 2px solid black;">Languages</h2>
+        <p id="languages"></p>
+        <h2 style="border: 2px solid black;">People read</h2>
+        <p id="reading_counts"></p>
+        <h2 style="border: 2px solid black;">Subject</h2>
+        <p id="subject_type"></p>
+
+        <div style="margin-top: 20px;">
+            <a id="amazon-link" href=""  style="border: 2px solid black;">Click to buy</a>
+
+        </div>
+
+       
+    </div>
+
+    
+    </div>
+    
+
+    <!-- Back button (this button will navigate to the search page) -->
+    
+
+    <script>
+        // Get the query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const coverId = urlParams.get('coverId');
+        const title = urlParams.get('title');
+        const author = urlParams.get('author');
+        const publishYear = urlParams.get('publishYear');
+        const author_image =urlParams.get('author_image');
+        const publish_place=urlParams.get('publish_place');
+        const publisher = urlParams.get('publisher')
+        const language = urlParams.get('languages')
+        const reading_count = urlParams.get('reading_count');
+        const subject = urlParams.get('subject');
+       
+        
+        //console.log(author_image);
+
+        // Display the book details
+        const bookCover = document.getElementById('book-cover');
+        const bookTitle = document.getElementById('book-title');
+        const bookAuthor = document.getElementById('book-author');
+        const bookPubDate = document.getElementById('book-pub-date');
+        const author_image_display = document.getElementById('author_image')
+        const amazon_link = document.getElementById('amazon-link');
+        const publish_places = document.getElementById('publish_places')
+        const publisher_name = document.getElementById('publisher_name');
+        const languages = document.getElementById('languages')
+        const reading_counts = document.getElementById('reading_counts')
+        const subject_type =document.getElementById('subject_type')
+        
+
+        // Set the content
+        if (coverId) {
+            bookCover.src = `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`;
+            author_image_display.src=`https://covers.openlibrary.org/a/olid/${author_image}-S.jpg`
+            console.log(author_image)
+            
+        }
+        bookTitle.textContent = title || 'No Title Available';
+        bookAuthor.textContent = `Author: ${author || 'Unknown'}`;
+        bookPubDate.textContent = `Published: ${publishYear || 'Unknown'}`;
+        amazon_link.href = `https://www.amazon.com/s?k=${encodeURIComponent(bookTitle.textContent)}`;
+        amazon_link.target="_blank"
+        publish_places.textContent=publish_place
+        publisher_name.textContent=publisher
+        languages.textContent=language
+        reading_counts.textContent=reading_count;
+        subject_type.textContent=subject;
+        
+        console.log(languages)
+        console.log(publisher)
+        console.log(reading_count)
+        console.log(subject)
+
+        // Back button functionality
+        const backButton = document.getElementById('back-button');
+        backButton.addEventListener('click', function() {
+            window.history.back(); // This will navigate the user back to the previous page
+        });
+    </script>
+</body>
+</html>
