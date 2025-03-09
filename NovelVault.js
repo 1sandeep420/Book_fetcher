@@ -4,7 +4,23 @@ document.addEventListener('DOMContentLoaded', function()
     const input = document.getElementById('input');
     const image_dsplay = document.getElementById('display-images-block');
     const submit=document.getElementById("submit_button");
+    const Bars_click =document.getElementById('Bars')
+    const Close_Bar = document.getElementById('close')
+    const Nav_ele = document.getElementsByClassName('nav')[0]
+    Bars_click.addEventListener('click', ()=>
+        {
+            Nav_ele.classList.toggle('active')
+            console.log(Nav_ele)
+            
+        })
+    Close_Bar.addEventListener('click' ,()=>
+    {
+        {
+            Nav_ele.classList.remove('active')
+        }
 
+    })
+    
     image_dsplay.src="https://covers.openlibrary.org/b/id/9269962-L.jpg"
 
     //function to get the image data
